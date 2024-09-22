@@ -3194,6 +3194,7 @@ make install
 ![](https://img.164314.xyz/2024/09/f38561199d36e0adb1510675b757f997.png)
 
 到此为止，我们已经结束了所有软件包的安装，接下来我们很快就可以进入我们的系统了!!
+
 ---
 
 ## 7.83 清理垃圾
@@ -3291,6 +3292,8 @@ LC_ALL=zh_CN.UTF-8 locale int_curr_symbol
 LC_ALL=zh_CN.UTF-8 locale int_prefix
 ```
 
+再运行
+
 ```
 cat > /etc/profile << "EOF"
 # Begin /etc/profile
@@ -3304,9 +3307,7 @@ else
 fi
 # End /etc/profile
 EOF
-
 ```
-
 
 ![](https://img.164314.xyz/2024/09/e2b161b62f1eb17562349b5945770dc8.png)
 
@@ -3378,7 +3379,6 @@ tmpfs           /dev/shm tmpfs   nosuid,nodev 0 0
 cgroup2         /sys/fs/cgroup cgroup2 nosuid,noexec,nodev 0 0
 # End /etc/fstab
 EOF
-
 ```
 
 ## 9.2 配置内核
@@ -3406,15 +3406,15 @@ EOF
 
 除了上方的修改之外，还需要修改下方的地方。一般来讲，只要先运行了`make defconfig`后，只需要再修改一下下方的地方就可以了。如果出现错误，建议重新设置。
 
-– Device Drivers, Generic Driver Options, Maintain a devtmpfs filesystem to mount at /dev
+- Device Drivers, Generic Driver Options, Maintain a devtmpfs filesystem to mount at /dev
 
-– Device Drivers, Network device support, Ethernet Driver support, AMD PCnet32 PCI support
+- Device Drivers, Network device support, Ethernet Driver support, AMD PCnet32 PCI support
 
-– Device Drivers, Fusion MPT device support (select the three drivers for SPI, FC, SAS)
+- Device Drivers, Fusion MPT device support (select the three drivers for SPI, FC, SAS)
 
-– Device Drivers, SCSI device support, SCSI low-level drivers
+- Device Drivers, SCSI device support, SCSI low-level drivers
 
-– File Systems, Ext3 Journaling file system support
+- File Systems, Ext3 Journaling file system support
 
 修改好了之后，我们就可以运行`make`了，这个过程会非常的漫长，所以请耐心等待。
 
@@ -3430,6 +3430,7 @@ cp -r Documentation -T /usr/share/doc/linux-6.10.5
 上方的命令是将内核的一些文件复制到了/boot目录下，这样我们就可以引导了。
 
 ### 9.2.2 Grub
+
 之后开始修改引导文件，也就是grub
 
 
