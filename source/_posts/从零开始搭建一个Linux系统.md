@@ -2717,9 +2717,9 @@ make install
 
 下面是安装coreutils的命令
 
-```
 patch -Np1 -i ../coreutils-9.5-i18n-2.patch # 这个补丁好像是有一个bug，我这里尝试构建了好几次但是都没有成功，后来我想着不打这个补丁试试，结果成功了。
 
+```
 autoreconf -fiv
 FORCE_UNSAFE_CONFIGURE=1 ./configure \
 --prefix=/usr \
