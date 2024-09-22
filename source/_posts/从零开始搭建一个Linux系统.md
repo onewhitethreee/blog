@@ -3154,7 +3154,9 @@ install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info
 make
 
 make install
+```
 
+```
 cat > /etc/syslog.conf << "EOF"
 # Begin /etc/syslog.conf
 auth,authpriv.* -/var/log/auth.log
