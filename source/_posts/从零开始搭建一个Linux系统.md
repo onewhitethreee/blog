@@ -2141,11 +2141,10 @@ PATH=/usr/bin:/usr/sbin \
 MAKEFLAGS="-j$(nproc)" \
 TESTSUITEFLAGS="-j$(nproc)" \
 /bin/bash --login # 进入chroot环境
-
-
 ```
 
 运行
+
 ```
 case $(uname -m) in
 x86_64)
@@ -2214,7 +2213,9 @@ ln -sv gcc.1 /usr/share/man/man1/cc.1
 
 ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/14.2.0/liblto_plugin.so \
 /usr/lib/bfd-plugins/
-```   
+```
+
+---
 
 如果一切正常，那么在运行测试的时候你会看见如下图所示。
 
