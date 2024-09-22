@@ -2206,6 +2206,7 @@ chown -v -R root:root \
 在接下来需要链接一下文件
 
 运行
+
 ```
 ln -svr /usr/bin/cpp /usr/lib
 
@@ -2213,7 +2214,6 @@ ln -sv gcc.1 /usr/share/man/man1/cc.1
 
 ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/14.2.0/liblto_plugin.so \
 /usr/lib/bfd-plugins/
-
 ```   
 
 如果一切正常，那么在运行测试的时候你会看见如下图所示。
@@ -2232,7 +2232,6 @@ grep -B4 '^ /usr/include' dummy.log
 grep found dummy.log
 
 grep "/lib.*/libc.so.6 " dummy.log
-
 ```
 
 ![](https://img.164314.xyz/2024/09/214ded14bd212c9cc4008e7998e8cd95.png)
@@ -2256,8 +2255,10 @@ mkdir -pv /usr/share/gdb/auto-load/usr/lib
 mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 ```
 
-至此，我们已经完成了gcc的安装。好耶！！
+**至此，我们已经完成了gcc的安装。好耶！！
+**
 ---
+
 
 ## 7.3 Ncurses
 
@@ -2287,7 +2288,6 @@ ln -sfv ${lib}w.pc /usr/lib/pkgconfig/${lib}.pc
 done
 
 ln -sfv libncursesw.so /usr/lib/libcurses.so
-
 ```
 
 成功后如下图所示。
@@ -2299,6 +2299,7 @@ ln -sfv libncursesw.so /usr/lib/libcurses.so
 ## 7.31 Sed
 
 运行
+
 ```
 ./configure --prefix=/usr
 
@@ -2317,6 +2318,7 @@ install -m644 doc/sed.html /usr/share/doc/sed-4.9
 ## 7.32 Psmisc
 
 运行
+
 ```
 ./configure --prefix=/usr
 
@@ -2329,6 +2331,7 @@ make && make install
 ## 7.33 Gettext
 
 运行
+
 ```
 ./configure --prefix=/usr \
 --disable-static \
@@ -2338,7 +2341,6 @@ make
 
 make install
 chmod -v 0755 /usr/lib/preloadable_libintl.so
-
 ```
 
 ![](https://img.164314.xyz/2024/09/aa30455afa30539121d7325f38035183.png)
@@ -2347,6 +2349,7 @@ chmod -v 0755 /usr/lib/preloadable_libintl.so
 ## 7.34 Bison
 
 运行
+
 ```
 ./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.8.2
 
@@ -2362,6 +2365,7 @@ make install
 ## 7.35 Grep
 
 运行
+
 ```
 sed -i "s/echo/#echo/" src/egrep.sh
 
@@ -2376,6 +2380,7 @@ make && make install
 ## 7.36 Bash
 
 运行
+
 ```
 
 ./configure --prefix=/usr \
@@ -2394,6 +2399,7 @@ exec /usr/bin/bash --login
 ## 7.37 Libtool
 
 运行
+
 ```
 ./configure --prefix=/usr
 
@@ -2407,6 +2413,7 @@ rm -fv /usr/lib/libltdl.a
 ## 7.38 GDBM
 
 运行
+
 ```
 ./configure --prefix=/usr \
 --disable-static \
@@ -2420,6 +2427,7 @@ make && make install
 ## 7.39 Gperf
 
 运行
+
 ```
 ./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1
 
@@ -2477,7 +2485,6 @@ make && make install
 ## 7.43 Perl
 
 ```
-
 export BUILD_ZLIB=False
 export BUILD_BZIP2=0
 
