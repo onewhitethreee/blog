@@ -26,6 +26,6 @@
     "hexo-theme-landscape": "^0.0.3",
     "hexo-uuid": "^1.0.2",
     "meilisearch": "^0.30.0",
-    "uuid": "^9.0.0"
+    "uuid": "^10.0.0"
   }
 }
